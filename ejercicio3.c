@@ -11,10 +11,12 @@ char string1[]="hola", string2[]=" profe",string3[]=" pongame 20 :)";
 concadenacion(string1,string2,string3);
 }
 
-void concadenacion(char string1[],char string2[], char string3[], char) {
+void concadenacion(char string1[],char string2[], char string3[]) {
+char string_aux[sizeof(string1)+sizeof(string2)+sizeof(string3)];  
 strcat(string1,string2);
 strcat(string1,string3);
-printf("\nla oracion resultante seria: %s", string1);
-strrev(string1);
-printf("\nla oracion dada la vuelta seria: %s\n", string1);
+strcpy(string_aux,string1);
+printf("\nla oracion resultante seria: %s", string_aux);
+strrev(string_aux);
+printf("\nla oracion dada la vuelta seria: %s\n", string_aux);
 }
